@@ -6,18 +6,23 @@
   --header-height: 3.5rem;
 
   /*========== Colors ==========*/
-  /*Color mode HSL(hue, saturation, lightness)*/
-  /* 
-      Change favorite color
-      Default: hsl(162, 100%, 40%)
-      Orange: hsl(14, 100%, 65%) - Blue: hsl(210, 100%, 70%)
-      Pink: hsl(356, 100%, 75%) - Purple: hsl(250, 100%, 75%)
+  /*HSL(hue, saturation, lightness)*/
 
-      For more colors visit: https://colors.dopely.top/color-pedia
-      -> Choose any color 
-      -> click on tab (Color Conversion)
-      -> Copy the color mode (HSL)
-  */
+  --white: #ffffff;
+  --light-grey: #f0f0f0;
+  --black: #000000;
+  --turquoise: #64ffda;
+  --blue: #17aab5;
+  --dark-navy: #0a192f;
+  --medium-navy: #112240;
+  --light-navy: #233554;
+  --dark-lilac: #8892b0;
+  --medium-lilac: #a8b2d1;
+  --light-lilac: #ccd6f6;
+  --pink: #ff54b3;
+  --neon: hsl(317 100% 54%);
+  --dark-grey: #24363a;
+  --purple: #8280ff;
 
   --hue: 162;
   --first-color: hsl(var(--hue), 100%, 40%);
@@ -113,7 +118,7 @@ svg {
   height: auto;
 }
 
-/*=============== REUSABLE CSS CLASSES ===============*/
+/*=============== REUSABLE CLASSES ===============*/
 .container {
   max-width: 1120px;
   margin-inline: 1.5rem;
@@ -142,7 +147,7 @@ svg {
 
 .section__subtitle {
   font-size: var(--small-font-size);
-  margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 
 .section__subtitle span {
@@ -170,21 +175,96 @@ svg {
   align-items: center;
 }
 
-.nav__logo{
-  color: var()
+.nav__logo {
+  max-width: 30px;
+  padding-top: 0.3rem
+}
+
+/* .nav__logo {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+}
+
+.nav__logo span {
+  color: var(--first-color);
+} */
+
+
+.nav_toggle,
+.nav__close {
+  display: flex;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  cursor: pointer;
 }
 
 /* Navigation for mobile devices */
+@media screen and (max-width: 1023px) {
+  .nav__menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: hsla(0, 0%, 10%, .3);
+    width: 75%;
+    height: 100%;
+    padding: 4.5rem 0 0 3rem;
+    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(24px);
+    transition: right 0.4s;
+  }
+}
 
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
 
-/* Show menu */
+.nav__link {
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: color 0.4s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+/* close button */
+.nav__close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+/* Show menu */ 
+.show-menu {
+  right: 0;
+}
 
 
 /* Add blur to header */
+.blur-header {
+  background-color: transparent;
+}
 
+.blur-header::after {
+  content: "";
+  position: absolute;
+  width: 1000%;
+  height: 100%;
+  background-color: hsla(0, 0%, 10%, .3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px); /* For safari */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
 
 /* Active link */
-
+.active-link {
+  color: var(--first-color);
+}
 
 /*=============== HOME ===============*/
 
