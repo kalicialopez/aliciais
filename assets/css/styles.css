@@ -8,20 +8,6 @@
   /*========== Colors ==========*/
   /*HSL(hue, saturation, lightness)*/
 
-  /* --white: #ffffff;
-  --light-grey: #f0f0f0;
-  --black: #000000;
-  --blue: #17aab5;
-  --medium-navy: #112240;
-  --light-navy: #233554;
-  --dark-lilac: #8892b0;
-  --medium-lilac: #a8b2d1;
-  --light-lilac: #ccd6f6;
-  --pink: #ff54b3;
-  --neon: hsl(317 100% 54%);
-  --dark-grey: #24363a;
-  --purple: #8280ff; */
-
 
   --first-color: #ff54b3;   /*pink*/
   --first-color-alt: hsl(317 100% 54%);   /*neon pink*/
@@ -33,15 +19,6 @@
   --body-color: hsl(228, 15%, 20%);    /*default light grey*/
   --container-color: hsl(228, 15%, 15%);  /*default blue-black*/
   --container-color-alt: #112240;     /*navy*/
-
-
-  /* --hue: 162;
-  --first-color: hsl(var(--hue), 100%, 40%);
-  --first-color-alt: hsl(var(--hue), 56%, 35%);
-  --title-color: hsl(228, 8%, 95%);
-  --text-color: hsl(228, 8%, 65%);
-  --body-color: hsl(228, 15%, 20%);
-  --container-color: hsl(228, 15%, 15%); */
 
   /*========== Font and typography ==========*/
   /*0.5rem = 8px | 1rem = 16px*/
@@ -471,7 +448,29 @@ blink {
   background-color: var(--container-color);
 }
 
+.section__title {
+  font-size: var(--h2-font-size);
+  /* color: var(--title-color) */
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
+.skills__img {
+  width: 55px;
+  transition: transform 0.4s;
+}
+
+.skills__img:hover {
+  transform: translateY(-0.5rem);
+}
+
+.skills__content {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 1.5rem;
+}
 
 /*=============== ABOUT ===============*/
 
