@@ -8,12 +8,10 @@
   /*========== Colors ==========*/
   /*HSL(hue, saturation, lightness)*/
 
-  --white: #ffffff;
+  /* --white: #ffffff;
   --light-grey: #f0f0f0;
   --black: #000000;
-  --turquoise: #64ffda;
   --blue: #17aab5;
-  --dark-navy: #0a192f;
   --medium-navy: #112240;
   --light-navy: #233554;
   --dark-lilac: #8892b0;
@@ -22,22 +20,35 @@
   --pink: #ff54b3;
   --neon: hsl(317 100% 54%);
   --dark-grey: #24363a;
-  --purple: #8280ff;
+  --purple: #8280ff; */
 
-  --hue: 162;
+
+  --first-color: #ff54b3;   /*pink*/
+  --first-color-alt: hsl(317 100% 54%);   /*neon pink*/
+  --second-color: #17aab5;   /*blue*/
+  --third-color: #8280ff;     /*purple*/
+  --title-color: #ffffff;   /*white*/
+  --text-color: #ADAA9F;  /*default light brown*/
+  --text-color-alt: #a8b2d1;  /*medium lilac*/  
+  --body-color: hsl(228, 15%, 20%);    /*default light grey*/
+  --container-color: hsl(228, 15%, 15%);  /*default blue-black*/
+  --container-color-alt: #112240;     /*navy*/
+
+
+  /* --hue: 162;
   --first-color: hsl(var(--hue), 100%, 40%);
   --first-color-alt: hsl(var(--hue), 56%, 35%);
   --title-color: hsl(228, 8%, 95%);
   --text-color: hsl(228, 8%, 65%);
   --body-color: hsl(228, 15%, 20%);
-  --container-color: hsl(228, 15%, 15%);
+  --container-color: hsl(228, 15%, 15%); */
 
   /*========== Font and typography ==========*/
-  /*.5rem = 8px | 1rem = 16px ...*/
+  /*0.5rem = 8px | 1rem = 16px*/
   --body-font: "Poppins", sans-serif;
   --biggest-font-size: 2rem;
   --bigger-font-size: 1.25rem;
-  --h1-font-size: 1.5rem;
+  --h1-font-size: 3rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
   --normal-font-size: .938rem;
@@ -59,7 +70,7 @@
   :root {
     --biggest-font-size: 4rem;
     --bigger-font-size: 2rem;
-    --h1-font-size: 2.25rem;
+    --h1-font-size: 5rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -176,20 +187,11 @@ svg {
 }
 
 .nav__logo {
-  max-width: 30px;
+  max-width: 2.4rem;
   padding-top: 0.3rem
 }
 
-/* .nav__logo {
-  color: var(--title-color);
-  font-weight: var(--font-medium);
-}
-
-.nav__logo span {
-  color: var(--first-color);
-} */
-
-
+/* JS */
 .nav_toggle,
 .nav__close {
   display: flex;
@@ -242,7 +244,6 @@ svg {
   right: 0;
 }
 
-
 /* Add blur to header */
 .blur-header {
   background-color: transparent;
@@ -267,15 +268,212 @@ svg {
 }
 
 /*=============== HOME ===============*/
+.home {
+  background-color: var(--container-color);
+}
 
+.home__container {
+  padding-top: 2rem;
+  row-gap: 2.5rem;
+}
 
-/*=============== BUTTON ===============*/
+.home__content {
+  display: grid;
+  row-gap: 2rem;
+}
 
+.home__data {
+  text-align: center;
+  /* display:flex;
+  flex-direction: column; */
+}
 
-/*=============== ABOUT ===============*/
+/* Home title and typewriter effect..... adding h1 stops typewriter effect and some of the below properties from working? May need to separate out h1 and the class*/
+.h1 {
+  margin: 0 auto; /* Scrolling effect as typing happens */
+  text-animation: typing 2.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  float: left;
+  margin-block: 1rem 1.5rem; 
+}
+
+.home__title {
+  font-weight: var(--font-semi-bold);
+  font-size: var(--h1-font-size);
+  letter-spacing: 0.3rem;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap; /* Keeps content on single line */
+}
+
+.home__name {
+  font-size: 1em;
+  margin-top: 20px;
+  color: var(--first-color);
+}
+
+.home__dot {
+  font-size: 1em;
+  margin-top: 20px;
+  color: var(--text-color);
+}
+
+@keyframes typing {   /* Typing effect currently not working!? */
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+blink {
+  animation: blink 1s infinite;
+  color: var(--second-color);
+  font-size: 1.2em;
+}
+
+/* Home detail */
+/* .home_detail {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+} */
+
+.home__fullname,
+.home__description {
+  margin-block: 1rem 1.5rem;
+}
+
+.home__fullname {
+  color: var(--text-color-alt);
+  margin: 0 auto;
+}
+
+.home__description {
+  color: var(--title-color);
+  font-size: var(--bigger-font-size);
+  font-weight: var(--font-semi-bold);
+
+}
+
+/* Avatar */
+.home__image {
+  justify-self: center;
+}
+
+.home__blob {
+  width: 320px;
+  fill: var(--first-color);
+  filter: drop-shadow(0 12px 12px var(--first-color-alt));
+  /* filter: drop-shadow(0 0 0.75rem var(--first-color-alt)); */
+}
+
+/*=============== BUTTONS ===============*/
+/* .home__button {
+  display: inline-block;
+  background-color: var(--first-color);
+  padding: 1rem 1.75rem;
+  border-radius: .5rem;
+  color: var(--title-color);
+  font-weight: var(--font-medium);
+  transition: box-shadow .4s;
+}
+
+.button:hover {
+  box-shadow: 0 8px 24px hsla(var(--hue), 100%, 40%, .25);
+} */
+
+/* Home Buttons */
+.home__button {
+  font-size: var(--bigger-font-size);
+  display: inline-block;
+  flex-direction: row;
+  cursor: pointer;
+  color: var(--title-color);
+  border: currentColor var(--first-color-alt) 0.125em solid;
+  padding: 1rem 1.75rem;
+  border-radius: 1.75em;
+  margin-bottom: 2rem;
+
+  text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.3), 0 0 0.5em currentColor;
+  box-shadow: inset 0 0 0.5em 0 var(--first-color-alt), 0 0 0.5em 0 var(--first-color-alt);
+  position: relative;
+  transition: background-color 100ms linear;
+}
+
+.home__button::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  background: var(--first-color-alt);
+  top: 120%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2em;
+
+  transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+  filter: blur(1.5em);
+  opacity: 0.7;
+}
+
+.home__button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--first-color);
+  box-shadow: 0 0 2em 0.5em var(--first-color-alt);
+  opacity: 0;
+  background-color: var(--first-color-alt);
+  z-index: -1;
+  transition: opacity 100ms linear;
+  border-radius: 2em;
+}
+
+.home__button:hover,
+.home__button:focus {
+  background: var(--first-color-alt);
+  color: var(--title-color);
+  text-shadow: none;
+  border-radius: 2em;
+}
+
+.home__button:hover::before {
+  opacity: 1;
+}
+
+.home__button:hover::after,
+.home__button:focus::after {
+  opacity: 1;
+}
+
+/* Other buttons */
 
 
 /*=============== SKILLS ===============*/
+.skills {
+  background-color: var(--container-color);
+}
+
+
+
+/*=============== ABOUT ===============*/
 
 
 /*=============== SERVICES ===============*/
