@@ -16,6 +16,9 @@
       <!--=============== REMIXICONS ===============-->
       <link href="https://cdn.jsdelivr.net/npm/remixicon@3.0.0/fonts/remixicon.css" rel="stylesheet">
 
+      <!--=============== SWIPER CSS ===============-->
+      <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="assets/css/styles.css">
 
@@ -25,13 +28,15 @@
       <!--==================== HEADER ====================-->
       <header class="header" id="header">
          <nav class="nav container">
-            <a href="#" class="nav__logo">
-               <!-- Alicia <span>Lopez</span> -->
+            <a href="#home" class="nav__logo">
                <img src="assets/img/logo.png" alt="Alicia Lopez Portfolio" class="nav__logo-img">
             </a>
 
             <div class="nav__menu" id="nav-menu">
                <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">.home()</a>
+                  </li>
                   <li class="nav__item">
                      <a href="#about" class="nav__link">.about()</a>
                   </li>
@@ -64,21 +69,18 @@
          <section class="home section" id="home">
             <div class="home__container container grid">
                <div class="home__content">
+
                   <!-- Home text -->
                   <div class="home__data">
                      <h1 class="home__title">
                         <span class="home__name">alicia</span>.<span class="home__dot"></span>is()<span class="home__cursor"><blink>|</blink></span>
                      </h1>
-                     <!-- <br><br><br><br>  -->
                      <div class="home__detail">
                         <h3 class="home__fullname">Karen Alicia Lopez</h3>
                         <p class="home__description">Software developer</p>
                      </div>
-                     <!-- CTA buttons -->
-                     <!-- <div class="home__buttons"> -->
-                        <!-- <a href="#projects" class="home__button">View my projects</a> -->
-                        <a href="assets/karenalicialopezcv.pdf" class="home__button" title="Alicia's Resume" target="_blank">Download CV</a>
-                     <!-- </div> -->
+                     <a href="assets/karenalicialopezcv.pdf" class="home__button" title="Alicia's Resume" target="_blank">Download CV</a>
+                  </div>
                   </div>
 
                   <!-- Hexagon vector graphic and overlaying avatar -->
@@ -133,45 +135,447 @@
                <img src="assets/img/skills-icon/django.svg" alt="Django" class="skills__img">
                <img src="assets/img/skills-icon/tsql.svg" alt="TSQL" class="skills__img">
                <img src="assets/img/skills-icon/sqlserver.svg" alt="SQL Server" class="skills__img">
+               <img src="assets/img/skills-icon/docker.svg" alt="Docker" class="skills__img">
+               <img src="assets/img/skills-icon/insomnia.svg" alt="Insomnia" class="skills__img">
+               <img src="assets/img/skills-icon/git.svg" alt="Git" class="skills__img">
+               <img src="assets/img/skills-icon/github.svg" alt="Github" class="skills__img">
             </div>
          </section>
 
          <!--==================== ABOUT ====================-->
          <section class="about section" id="about">
-            
-         </section>
+            <div class="about__container container grid">
+               <div class="about__data">
+                  <h2 class="section__title">
+                     .aboutMe()
+                  </h2>
+                  <h3 class="section__subtitle">
+                     Welcome to my corner of the web
+                  </h3>   
+                  <div class="about__content">
+                     <p class="about__text">
+                        I'm a highly self motivated software developer driven to deliver value through 
+                     technology, by creating sustainable, scalable, user-friendly solutions. 
+                     As a life-long learner, I believe that all hard skills can be 
+                     learnt through focused effort and consistent practice.
+                     </p>
+                     <br/>
+                     <p class="about__text">
+                        I bring with me 10 years of professional experience in academia, as a science 
+                     educator, mentor, chemistry tutor and lab facilitator. Keeping this personal 
+                     philosophy at the forefront of every professional 
+                     experience and learning challenge, is what has lead me to where I am today.
+                     </p>
+                     <br/>
+                     <p class="about__text">
+                        My unique blend of technical, interpersonal and problem-solving skills, coupled with
+                     a talent for simplifying complex concepts, allows me to work comfortably within diverse 
+                     teams and build strong rapport with all manner of clients. 
+                     </p>
+                     <br/>
+                     <p class="about__text">
+                        I maintain a keen interest in more than just coding languages, welcoming any 
+                     opportunity to practice my portuguese and spanish, and enjoy giving back to my community 
+                     through mentoring and participation in other volunteer initiatives. 
+                     In the wild, you may find me indulging in a stategy-based boardgame, playing my 
+                     piano or trying weird new foods. 
+                     </p>
+                  </div>
+                  <!-- <a href="#blog" class="button">Check out my blog!</a> -->
 
-         <!--==================== SERVICES ====================-->
-         <section class="services section" id="services">
-            
+                  <!-- Hexagon vector graphic and overlaying avatar -->
+                  <div class="about__image">
+                     <svg class="about__blob" viewBox="0 0 550 592" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <mask id="maskBorder" mask-type="alpha">
+                           <path d="M263 48.1782C270.426 43.891 279.574 43.891 287 48.1782L501.157 
+                           171.822C508.583 176.109 513.157 184.032 513.157 192.606V439.894C513.157 
+                           448.468 508.583 456.391 501.157 460.678L287 584.322C279.574 588.609 
+                           270.426 588.609 263 584.322L48.843 460.678C41.4174 456.391 36.843 448.468 36.843 
+                           439.894V192.606C36.843 184.032 41.4174 176.109 48.843 171.822L263 48.1782Z" fill="black"/>
+                        </mask>
+                        <g mask="url(#maskBorder)">
+                           <rect x="37" width="476" height="630" fill="url(#pattern2)"/>
+                           
+                           <path d="M285 51.6423L499.157 175.286C505.345 178.859 509.157 185.461 509.157 
+                           192.606V439.894C509.157 447.039 505.345 453.641 499.157 457.214L285 
+                           580.858C278.812 584.43 271.188 584.43 265 580.858L50.843 457.214C44.655 453.641 
+                           40.843 447.039 40.843 439.894V192.606C40.843 185.461 44.655 178.859 50.843 
+                           175.286L265 51.6423C271.188 48.0697 278.812 48.0696 285 51.6423Z" stroke="black" stroke-width="10"/>
+                        </g>
+                     
+                        <rect x="37" width="476" height="300" fill="url(#pattern3)"/>
+                     
+                        <defs>
+                           <pattern id="pattern2" patternContentUnits="objectBoundingBox" width="1" height="1">
+                              <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00108108 0.0404062 0)"/>
+                           </pattern>
+                     
+                           <pattern id="pattern3" patternContentUnits="objectBoundingBox" width="1" height="1">
+                              <use href="#imageBorder" transform="matrix(0.00143057 0 0 0.00226984 0.0404062 0)"/>
+                           </pattern>
+                     
+                           <!-- Profile photo -->
+                           <image class="about__img" id="imageBorder" width="640" height="940" href="assets/img/profile.png"/>
+                        </defs>
+                     </svg>
+                  </div>                  
+               </div> 
          </section>
 
          <!--==================== PROJECTS ====================-->
          <section class="projects section" id="projects">
-            
+            <h2 class="section__title">
+               .myProjects()
+            </h2>
+               <div class="projects__container container">
+                  <!-- Swiper -->
+                  <div class="project__swiper swiper">
+                     <div class="swiper-wrapper">
+                        <!-- Project 1 -->
+                        <article class="project__card swiper-slide">
+                           <h2 class="project__name">Legacy Portfolio</h2>
+                           <p class="project__subtitle">The second iteration of my professional portfolio
+                           </p>
+                           <div class="project__border">
+                              <img src="assets/img/projects/1portfoliov2.png" alt="Legacy portfolio 2" class="project__img">
+                           </div>
+
+                           <!-- Tech stack -->
+                           <p class="project__techstack-text">
+                              Stack
+                           </p>      
+                           <div class="project__techstack">
+                              <img src="assets/img/skills-icon/html5.svg" alt="HTML5" class="projecttech__img">
+                              <img src="assets/img/skills-icon/css3.svg" alt="CSS3" class="projecttech__img">
+                              <img src="assets/img/skills-icon/javascript.svg" alt="Javacript" class="projecttech__img">
+                           </div>
+
+                              <!-- Description -->
+                              <p class="project__description">My final project in the She Codes Plus Program was a group project. 
+                              My group was assigned a client with specific requirements for a comparison shopping list app that 
+                              would allow users to compare price, brand and other special features for a particular product type, 
+                              to streamline the decision-making process when shopping around.<br>
+                              Within three weeks, my team and I used DRF to program the app, and React for the front-end to produce and deploy 'Buybuddy'. 
+                           </p>
+                           
+                           <!-- Links -->                         
+                           <a href="https://github.com/kalicialopez/portfolio" title="Karen's CV" target="_blank" class="small__button"><i class="ri-github-fill"></i>Repo</a>
+                        </article>
+
+                        <!-- Project 2 -->
+                        <article class="project__card swiper-slide">
+                           <h2 class="project__name">Buybuddy</h2>
+                           <p class="project__subtitle">The comparison shopping list app for the indecisive, yet
+                              financially savvy consumer
+                           </p>
+                           <div class="project__border">
+                              <img src="assets/img/projects/2buybuddy.png" alt="Buybuddy" class="project__img">
+                           </div>
+
+                           <!-- Tech stack -->
+                           <p class="project__techstack-text">
+                              Stack
+                           </p> 
+                           <div class="project__techstack">
+                              <img src="assets/img/skills-icon/html5.svg" alt="HTML5" class="projecttech__img">
+                              <img src="assets/img/skills-icon/css3.svg" alt="CSS3" class="projecttech__img">
+                              <img src="assets/img/skills-icon/react.svg" alt="React" class="projecttech__img">
+                              <img src="assets/img/skills-icon/django.svg" alt="Django" class="projecttech__img">
+                              <img src="assets/img/skills-icon/docker.svg" alt="Docker" class="projecttech__img">
+                              <img src="assets/img/skills-icon/insomnia.svg" alt="Insomnia" class="projecttech__img">
+                              <img src="assets/img/skills-icon/sqlite.svg" alt="sqlite" class="projecttech__img">
+                              <img src="assets/img/skills-icon/vitejs.svg" alt="Vitejs" class="projecttech__img">
+                           </div>
+
+                           <!-- Description -->
+                           <p class="project__description">My final project in the She Codes Plus Program was a group project. 
+                              My group was assigned a client with specific requirements for a comparison shopping list app that 
+                              would allow users to compare price, brand and other special features for a particular product type, 
+                              to streamline the decision-making process when shopping around.
+                              <br>
+                              Within three weeks, my team and I used DRF to program the app, and React for the front-end to produce and deploy 'Buybuddy'. 
+                              The app has a pleasant minimalist aesthetic and any item hearted (i.e. 'favourited'), 
+                              is immediately added to the users shopping list, where they are given the total of their intended purchases. 
+                              Stretch goals for this app are to implement webscraping, and image upload from a mobile device to automate 
+                              product input, as well as assigning priority to a product upon registration.
+                           </p>
+                           <!-- Links -->
+                           <a href="https://buy-buddy.netlify.app/"><i class="ri-external-link-fill"></i> Project</a>
+                           <a href="https://www.canva.com/design/DAFgUxkMK5w/L0gFS6huEUPzmnwEeZDEUg/edit"><i class="ri-slideshow-3-fill"></i> Presentation</a>
+                           <a href="https://buy-buddy.netlify.app/"><i class="ri-github-fill"></i>Repo</a>
+                        </article>
+
+                        <!-- Project 3 -->
+                        <article class="project__card swiper-slide">
+                           <h2 class="project__name">She Codes XMas Ed.</h2>
+                           <p class="project__subtitle">
+                              The most mouthwatering edition of She Codes News there ever was, prepare to salivate!
+                           </p>
+                           <div class="project__border">
+                              <img src="assets/img/projects/3shecodesnews.png" alt="She Codes XMas Ed." class="project__img">
+                           </div>
+
+                           <!-- Tech stack -->
+                           <p class="project__techstack-text">
+                              Stack
+                           </p> 
+                           <div class="project__techstack">
+                              <img src="assets/img/skills-icon/html5.svg" alt="HTML5" class="projecttech__img">
+                              <img src="assets/img/skills-icon/css3.svg" alt="CSS3" class="projecttech__img">
+                              <img src="assets/img/skills-icon/django.svg" alt="Django" class="projecttech__img">
+                              <img src="assets/img/skills-icon/sqlite.svg" alt="Sqlite" class="projecttech__img">
+                           </div>
+
+                           <!-- Description -->
+                           <p class="project__description">
+                              Filler text
+                           </p>
+
+                           <!-- Links -->
+                           <a href="https://buy-buddy.netlify.app/"><i class="ri-external-link-fill"></i> Project</a>
+                           <a href="https://github.com/kalicialopez/she-codes-django-news-project-kalicialopez"> Repo</a>
+                        </article>
+
+                        <!-- Project 4 -->
+                        <article class="project__card swiper-slide">
+                           <h2 class="project__name">Weather Data Processing</h2>
+                           <p class="project__subtitle">
+                              A simple weather data processing app that takes user input and returns the weather forecast
+                           </p>
+                           <div class="project__border">
+                              <img src="assets/img/projects/4weatherapp.png" alt="Weather Data Processing" class="project__img">
+                           </div>
+
+                           <!-- Tech stack -->
+                           <p class="project__techstack-text">
+                              Stack
+                           </p> 
+                           <div class="project__techstack">
+                              <img src="assets/img/skills-icon/python.svg" alt="Python" class="projecttech__img">
+                           </div>
+                           
+                           <!-- Description -->
+                           <p class="project__description">Testibng  first ecperienve
+                           </p>
+
+                           <!-- Links -->
+                           <a href="https://github.com/kalicialopez/she-codes-python-weather-project-kalicialopez"><i class="ri-github-fill"></i> Repo</a>
+                        </article>
+
+                        <!-- Project 5 -->
+                        <article class="project__card swiper-slide">
+                           <h2 class="project__name">EducAid</h2>
+                           <p class="project__subtitle">
+                              A non-for-profit crowdfunding platform aimed at making quality courses/learning more accessible to those in need
+                           </p>
+                           <div class="project__border">
+                              <img src="assets/img/projects/5educaid.png" alt="EducAid" class="project__img">
+                           </div>
+
+                           <!-- Tech stack -->
+                           <p class="project__techstack-text">
+                              Stack
+                           </p> 
+                           <div class="project__techstack">
+                              <img src="assets/img/skills-icon/html5.svg" alt="HTML5" class="projecttech__img">
+                              <img src="assets/img/skills-icon/css3.svg" alt="CSS3" class="projecttech__img">
+                              <img src="assets/img/skills-icon/react.svg" alt="React" class="projecttech__img">
+                              <img src="assets/img/skills-icon/docker.svg" alt="Docker" class="projecttech__img">
+                              <img src="assets/img/skills-icon/insomnia.svg" alt="Insomnia" class="projecttech__img">
+                              <img src="assets/img/skills-icon/sqlite.svg" alt="Sqlite" class="projecttech__img">
+                              <img src="assets/img/skills-icon/vitejs.svg" alt="Vitejs" class="projecttech__img">
+                           </div>
+
+                           <!-- Description -->
+                           <p class="project__description">
+                              Filler text
+                           </p>
+
+                           <!-- Links -->
+                           <a href="https://educaid.netlify.app/"><i class="ri-external-link-fill"></i> Project</a>
+                           <a href="https://github.com/kalicialopez/she-codes-crowdfunding-api-project-kalicialopez"> API Repo</a>
+                           <a href="https://educaid.netlify.app/">Launch</a>
+                           <a href="https://github.com/kalicialopez/she-codes-crowdfunding-api-project-kalicialopez"> Front-end Repo</a>
+                        </article>
+
+                        <!-- Project 6 -->
+                        <article class="project__card swiper-slide">
+                           <h2 class="project__name">F•R•I•E•N•D•S</h2>
+                           <p class="project__subtitle">
+                              A simple quote guesser based on the popular TV show 'Friends'
+                           </p>
+                           <div class="project__border">
+                              <img src="assets/img/projects/6friendsquotes.png" alt="Friends quote guesser" class="project__img">
+                           </div>
+
+                           <!-- Tech stack -->
+                           <p class="project__techstack-text">
+                              Stack
+                           </p> 
+                           <div class="project__techstack">
+                              <img src="assets/img/skills-icon/html5.svg" alt="HTML5" class="projecttech__img">
+                              <img src="assets/img/skills-icon/css3.svg" alt="CSS3" class="projecttech__img">
+                              <img src="assets/img/skills-icon/javascript.svg" alt="Javacript" class="projecttech__img">
+                           </div>
+
+                           <!-- Description -->
+                           <p class="project__description">My final project in the She Codes Plus Program was a group project. 
+                              My group was assigned a client with specific requirements for a comparison shopping list app that 
+                              would allow users to compare price, brand and other special features for a particular product type, 
+                           </p>
+
+                           <!-- Links -->
+                           <a href="https://www.shecodes.io/cohorts/722/projects/910928?_gl=1*1j7xiaf*_gcl_au*MzI5Mzk3MTkuMTcyMzIyMzYwMQ.."><i class="ri-external-link-fill"></i> Project</a>
+                           <a href="https://github.com/kalicialopez/friends-quote-guesser"><i class="ri-github-fill"></i> Repo</a>
+                        </article>
+
+                        <!-- Project 7 -->
+                        <article class="project__card swiper-slide">
+                           <h2 class="project__name">Sci-fi fanclub</h2>
+                           <p class="project__subtitle">
+                              This one's for the sci-fi fans
+                           </p>
+                           <div class="project__border">
+                              <img src="assets/img/projects/7comingsoon.png" alt="Coming soon" class="project__img">
+                           </div>
+
+                           <!-- Tech stack -->
+                           <p class="project__techstack-text">
+                              Stack
+                           </p> 
+                           <div class="project__techstack">
+                              <img src="assets/img/skills-icon/html5.svg" alt="HTML5" class="projecttech__img">
+                              <img src="assets/img/skills-icon/css3.svg" alt="CSS3" class="projecttech__img">
+                              <img src="assets/img/skills-icon/django.svg" alt="Django" class="projecttech__img">
+                              <img src="assets/img/skills-icon/sqlite.svg" alt="Sqlite" class="projecttech__img">
+                           </div>
+                           <!-- Description -->
+                           <p class="project__description">
+                              HTMX
+                           </p>
+
+                           <!-- Links -->
+                           <!-- <a href="https://buy-buddy.netlify.app/"><i class="ri-external-link-fill"></i>Project</a> -->
+                           <!-- <a href="">Repo</a> -->
+                        </article>
+
+                        <!-- Project 8 -->
+                        <article class="project__card swiper-slide">
+                           <h2 class="project__name">Ana Lucia Pereira</h2>
+                           <p class="project__subtitle">
+                              A simple portfolio for a friend
+                           </p>
+                           <div class="project__border">
+                              <img src="assets/img/projects/7comingsoon.png" alt="Coming soon" class="project__img">
+                           </div>
+
+                           <!-- Tech stack -->
+                           <p class="project__techstack-text">
+                              Stack
+                           </p> 
+                           <div class="project__techstack">
+                              <img src="assets/img/skills-icon/html5.svg" alt="HTML5" class="projecttech__img">
+                              <img src="assets/img/skills-icon/react.svg" alt="React" class="projecttech__img">
+                              <img src="assets/img/skills-icon/docker.svg" alt="Docker" class="projecttech__img">
+                              <img src="assets/img/skills-icon/tailwind.svg" alt="tailwind" class="projecttech__img">
+                              <img src="assets/img/skills-icon/vitejs.svg" alt="Vitejs" class="projecttech__img">
+                           </div>
+
+                           <!-- Description -->
+                           <p class="project__description"> 
+                              Filler text 
+                           </p>
+
+                           <!-- Links -->
+                           <!-- <a href="https://buy-buddy.netlify.app/"><i class="ri-external-link-fill"></i> Project</a> -->
+                           <!-- <a href=""> Repo</a> -->
+                        </article>                     
+                     </div>
+
+                     <!-- Pagination -->
+                     <div class="swiper-pagination"></div>
+                  </div>
+               </div>  
          </section>
 
          <!--==================== CONTACT ====================-->
          <section class="contact section" id="contact">
-            
+            <div class="contact__container container grid">
+               <h2 class="section__title">
+                  .contactMe()
+               </h3>
+               <p class="section__subtitle">
+                  Please reach out if you'd like to collaborate or ask me any questions about my work!
+               </p>
+                  <div class="contact__page container grid">
+                     <form action="https://formspree.io/f/xdojdvro" method="post" class="contact__form grid" id="contact-form">
+                        <div class="contact__group grid">
+                           <div class="contact__box">
+                              <input type="text" name="user_name" id="name" required placeholder="Your name" class="contact__input"></input>
+                              <label for="" class="contact__label">Name</label>
+                           </div>
+
+                           <div class="contact__box">
+                              <input type="text" name="user_email" id="email" required placeholder="Your email" class="contact__input"></input>
+                              <label for="email" class="contact__label">Email Address</label>
+                           </div>
+                        </div>
+                        <div class="contact__box contact__area">
+                           <textarea name="user_message" id="message" required placeholder="Hi Alicia, I really like the 80s vibe of your website!" class="contact__input"></textarea>
+                           <label for="message" class="contact__label">Message</label>
+                        </div>
+
+                        <!-- <p class="contact__message" id="contact-message">Message</p> -->
+                        <button type="submit" class="button contact__button">
+                           Send Message
+                        </button>
+                     </form>
+                  </div>
+            </div>
          </section>
       </main>
 
       <!--==================== FOOTER ====================-->
       <footer class="footer">
-         
+         <div class="footer__container container grid">
+            <div>
+               <h1 class="footer__title">
+                  alicia<span>.is()</span>
+               </h1>
+            </div>
+            <div class="footer__social">
+               <a href="https://github.com/kalicialopez" target="_blank" class="footer__social-link">
+                  <i class="ri-github-fill"></i>
+               </a>
+               <a href="https://www.linkedin.com/in/kalicialopez/" target="_blank" class="footer__social-link">
+                  <i class="ri-linkedin-box-fill"></i>
+               </a>
+            </div>
+
+            <span class="footer__copy">
+               &#169; Code by Alicia Lopez 2024
+            </span>
+         </div>         
       </footer>
 
       <!--========== SCROLL UP ==========-->
-      
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-line"></i>
+      </a>      
 
       <!--=============== SCROLLREVEAL ===============-->
       <script src=""></script>
 
       <!--=============== EMAIL JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       
+      <!--=============== SWIPER JS ===============-->
+      <script src="assets/js/swiper-bundle.min.js"></script>
+      <script src="assets/js/index.js"></script>
+
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
+
    </body>
 </html>
