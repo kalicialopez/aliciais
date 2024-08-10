@@ -252,6 +252,10 @@ svg {
   font-weight: var(--font-semi-bold);
 }
 
+.text__link {
+  color: var(--second-color);
+  font-weight: var(--font-semi-bold);
+}
 /*=============== HOME ===============*/
 .home {
   background-color: var(--container-color);
@@ -535,7 +539,10 @@ blink {
   padding: 5px 15px;
   border: #8280ff;
   text-decoration: none;
+  color: var(--title-color);
+  margin: 0 0.5rem;
 }
+
 
 /*=============== SKILLS ===============*/
 .skills {
@@ -564,6 +571,7 @@ blink {
   justify-content: center;
   align-items: center;
   gap: 2rem 1.5rem;
+  padding-bottom: 2rem;
 }
 
 
@@ -580,13 +588,13 @@ blink {
   margin-bottom: 2rem;
 }
 
-
 .section__subtitle {
   padding-bottom: 0.8rem;
 }
 .about__text {
   text-indent: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
 }
 
 .about__image {
@@ -595,6 +603,7 @@ blink {
 
 .about__blob {
   width: 320px;
+  margin: 2rem 0;
 }
 
 .about__blob path {
@@ -621,8 +630,8 @@ blink {
 .project__card {
   background-color: var(--body-color);
   padding: 2rem 1.25rem 2.5rem 1.25rem;
-  border-inline: 6px solid var(--first-color-alt);
-  box-shadow: 0 12px 24px var(--first-color-alt);
+  border-inline: 6px solid var(--first-color);
+  box-shadow: 0 12px 24px var(--first-color);
   text-align: center;
   transition: background-color 0.4s;
 }
@@ -633,32 +642,22 @@ blink {
 
 .project__name {
   font-size: var(--h3-font-size);
-  padding: 1rem;
 }
 
 .project__subtitle {
-  padding: 2rem;
+  padding: 2rem 0;
   font-style: italic;
   color: var(--text-color-alt);
 }
 
 .project__img {
  padding: -1rem;
+
 }
 
 .project__card:hover .project__img {
   filter: none;
 }
-
-/* .project__techstack {
-  padding: 1rem;
-  display: grid;
-  justify-items: center;  
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: repeat(7, max-content);
-  gap: 2rem 1rem;
-} */
 
 .project__techstack-text {
  padding: 1rem;
@@ -670,9 +669,22 @@ blink {
 }
 
 .project__description {
-  padding: 1rem 1.5rem;
-  color: var(--title-color)
+  padding: 2.5rem 0;;
+  color: var(--title-color);
+  text-indent: 2rem;
+  text-align: left;
 }
+
+.project__links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 0.5rem;
+  row-gap: 1.2rem;
+  justify-content: center;
+  margin-top: 1rem;
+  padding: 0 4rem;
+} 
+
 
 /* Swiper class */
 .swiper {
@@ -792,6 +804,10 @@ blink {
   text-align: center;
 }
 
+.footer__title {
+  letter-spacing: 0.2rem;
+}
+
 .footer__title span {
   color: var(--first-color);
   letter-spacing: 0.2rem;
@@ -877,9 +893,31 @@ blink {
     row-gap: 1rem;
   }
 
+  .project__links {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    padding: 1rem;
+  }
+
 }
 
-/* Medium device */
+@media screen and (min-width: 320px) {
+  .skills__content {
+    grid-template-columns: repeat(4, max-content);
+    row-gap: 1rem;
+  }
+
+  .project__links {
+    display: grid;
+    grid-template-columns: repeat(1, max-content);
+  }
+
+
+}
+
+
+
+/* Medium devices */
 @media screen and (min-width: 576px) {
   .home__container,
   .about__container,
@@ -937,16 +975,28 @@ blink {
     margin-inline: auto;
     grid-template-columns: repeat(2, 352px);
   }
+
   .project__description {
     width: 470px;
     margin-inline: auto;
   }
 
+  .skills__content {
+    grid-template-columns: repeat(4, max-content);
+    row-gap: 1rem;
+  }
+
+  .project__links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 8rem;
+  }
+
   /* Makes form name and email fields collapse into one line */
-.contact__page {
-  grid-template-columns: 670px;
-  justify-content: center;
-}
+  .contact__page {
+    grid-template-columns: 670px;
+    justify-content: center;
+  }
 
 .contact__area {
   height: 18rem;
@@ -1001,6 +1051,17 @@ blink {
     backdrop-filter: blur(25px);
     -webkit-backdrop-filter: blur(25px); /* For safari */
   }
+
+  .skills__content {
+    grid-template-columns: repeat(6, max-content);
+    row-gap: 1rem;
+  }
+
+  .project__links {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    padding: 0 8rem;
+  }  
 }
 
 @media screen and (min-width: 1152px) {
@@ -1047,6 +1108,17 @@ blink {
   .skills__group {
     row-gap: 1.5rem;
   }
+
+  .skills__content {
+    grid-template-columns: repeat(4, max-content);
+    row-gap: 1rem;
+  }
+
+  .project__links {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    padding: 0 5rem;
+  }  
 
   .project__card {
     padding-block: 3rem 3.5rem;
